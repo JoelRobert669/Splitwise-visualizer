@@ -5,12 +5,12 @@
   <title>Splitwise Data Visualization - Dark Theme</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
-    /* Dark theme styles with gradients and transitions */
+    /* Dark theme styles with a plain dark background and bright text */
     body {
       margin: 0;
       padding: 20px;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background: linear-gradient(135deg, #141414, #2e2e2e);
+      background: #141414; /* Plain dark background */
       color: #e0e0e0;
     }
     h1 {
@@ -57,7 +57,7 @@
       outline: none;
     }
     .chart-container {
-      background: linear-gradient(145deg, #2e2e2e, #3a3a3a);
+      background: #2e2e2e;
       padding: 30px;
       margin: 20px auto;
       border-radius: 15px;
@@ -90,6 +90,9 @@
   </div>
 
   <script>
+    // Set Chart.js default text color to white for bright, clear chart text
+    Chart.defaults.color = "#ffffff";
+
     let currentChart = null;
     let dataset = null;
     let users = [];
